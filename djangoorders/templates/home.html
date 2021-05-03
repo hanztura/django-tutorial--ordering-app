@@ -1,0 +1,15 @@
+{% extends 'base_bulma.html' %}
+
+
+{% block title %}Ordering App{% endblock title %}
+{% block h1 %}Ordering App - Home{% endblock h1 %}
+
+{% block main %}
+  <p>Welcome to Django Ordering App.</p>
+  <p>To start, click here to login.</p>
+  <ul>
+    <li><a href="{% url 'customer_table' %}">Customers</a></li>
+    <li>Items</li>
+    <li>Orders</li>
+  </ul>
+{% endblock main %}

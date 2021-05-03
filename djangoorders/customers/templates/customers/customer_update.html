@@ -1,0 +1,60 @@
+{% extends 'customers/base.html' %}
+
+{% block title %} {{ customer|default:'' }} - Edit Customer{% endblock title %}
+{% block h1 %}{{ customer|default:'' }} - Edit Customer{% endblock h1 %}
+
+{% block main %}
+<form method="POST">
+  {% csrf_token %}
+  <table class="table">
+    <tbody>
+
+      {% if errors %}
+        <tr>
+          <td colspan="2"><span>{{ errors }}</span></td>
+        </tr>
+      {% endif %}
+
+      <tr>
+        <th><label>Last Name</label></th>
+        <td><input type="text" name="last_name" value="{{ customer.last_name }}" /></td>
+      </tr>
+      <tr>
+        <th><label>First Name</label></th>
+        <td><input type="text" name="first_name" value="{{ customer.first_name }}" /></td>
+      </tr>
+      <tr>
+        <th><label>Street</label></th>
+        <td><input type="text" name="street" value="{{ customer.street }}" /></td>
+      </tr>
+      <tr>
+        <th><label>City</label></th>
+        <td><input type="text" name="city" value="{{ customer.city }}" /></td>
+      </tr>
+      <tr>
+        <th><label>State</label></th>
+        <td><input type="text" name="state" value="{{ customer.state }}" /></td>
+      </tr>
+      <tr>
+        <th><label>ZIP</label></th>
+        <td><input type="text" name="zip_code" value="{{ customer.zip_code }}" /></td>
+      </tr>
+      <tr>
+        <th><label>Country</label></th>
+        <td>
+          <select name="country">
+            <option selected value="ph">Philippines</option>
+            <option value="" disabled>Others</option>
+          </select>
+        </td>
+      </tr>
+      <tr>
+        <th></th>
+        <td>
+          <button type="submit">Save</button>
+        </td>
+      </tr>
+    </tbody>
+  </table>
+</form>
+{% endblock main %}

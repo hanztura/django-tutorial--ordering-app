@@ -1,0 +1,45 @@
+{% extends 'customers/base.html' %}
+
+{% block title %} {{ customer|default:'' }} - Customer Detail{% endblock title %}
+{% block h1 %}{{ customer|default:'' }} - Customer{% endblock h1 %}
+
+{% block main %}
+
+  {% if customer %}
+    <table class="table">
+      <tbody>
+        <tr>
+          <th>Last Name</th>
+          <td>{{ customer.last_name }}</td>
+        </tr>
+        <tr>
+          <th>First Name</th>
+          <td>{{ customer.first_name }}</td>
+        </tr>
+        <tr>
+          <th>Street</th>
+          <td>{{ customer.street }}</td>
+        </tr>
+        <tr>
+          <th>City</th>
+          <td>{{ customer.city }}</td>
+        </tr>
+        <tr>
+          <th>State</th>
+          <td>{{ customer.state }}</td>
+        </tr>
+        <tr>
+          <th>ZIP Code</th>
+          <td>{{ customer.zip_code }}</td>
+        </tr>
+        <tr>
+          <th>Country</th>
+          <td>{{ customer.country }}</td>
+        </tr>
+      </tbody>
+    </table>
+  {% else %}
+    <p>Unable to find this customer.</p>
+  {% endif %}
+
+{% endblock main %}

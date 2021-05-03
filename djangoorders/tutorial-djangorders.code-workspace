@@ -1,0 +1,13 @@
+{
+  "folders": [
+	{
+		"path": "."
+	},
+	{
+		"path": "djangoorders"
+	}
+],
+  "settings": {
+    "python.pythonPath": "~/Projects/tutorial-djangoorderingapp/env/bin/python"
+  }
+}

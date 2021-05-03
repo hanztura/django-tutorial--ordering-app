@@ -1,0 +1,19 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <!-- Required meta tags -->
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+
+    <title>{% block title %}{% endblock title %}</title>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bulma@0.9.2/css/bulma.min.css">
+  </head>
+  <body>
+    <div class="container">
+      <h1 class="title is-1">{% block h1 %}{% endblock h1 %}</h1>
+    </div>
+    <main class="container">
+      {% block main %}{% endblock main %}
+    </main>
+  </body>
+</html>

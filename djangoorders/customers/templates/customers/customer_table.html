@@ -1,0 +1,40 @@
+{% extends 'customers/base.html' %}
+
+
+{% block title %}Customer List{% endblock title %}
+{% block h1 %}Customers{% endblock h1 %}
+
+{% block main %}
+  <table class="table">
+    <thead>
+      <tr>
+        <th colspan="3"></th>
+        <th colspan="5">Address</th>
+      </tr>
+      <tr>
+        <th>ID</th>
+        <th>First Name</th>
+        <th>Last Name</th>
+        <th>Street</th>
+        <th>City</th>
+        <th>State</th>
+        <th>ZIP Code</th>
+        <th>Country</th>
+      </tr>
+    </thead>
+    <tbody>
+      {% for customer in customers %}
+        <tr>
+          <td>{{ customer.pk }}</td>
+          <td>{{ customer.first_name }}</td>
+          <td>{{ customer.last_name }}</td>
+          <td>{{ customer.street }}</td>
+          <td>{{ customer.city }}</td>
+          <td>{{ customer.state }}</td>
+          <td>{{ customer.zip_code }}</td>
+          <td>{{ customer.country }}</td>
+        </tr>
+      {% endfor %}
+    </tbody>
+  </table>
+{% endblock main %}
