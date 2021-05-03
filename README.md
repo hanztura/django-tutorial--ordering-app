@@ -2,6 +2,10 @@
 
 > Learn web development using Python and Django by building an Ordering App
 
+## Authors
+
+- **Hanz Tura** - Python and Node Backend Developer. For any help [contact here](http://xofytech.com/#contact).
+
 ## Installation
 
 - `python3.9 -m venv env`
