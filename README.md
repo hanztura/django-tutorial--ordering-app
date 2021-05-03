@@ -1,4 +1,6 @@
-# Django Ordering App - Tutorial
+# Django Web Development with Python
+
+> Learn web development using Python and Django by building an Ordering App
 
 ## Installation
 
